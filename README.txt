@@ -6,8 +6,7 @@
 2) Delegación
     En una oficina hay un jefe que tiene un secretario el cual administra un fichero. Dadas las siguientes implementaciones seleccione la mejor alternativa y justifique.
       
-      *Elijo la opción 2 porque no está rompiendo encapsulamiento entre los objetos que se envían mensajes, ya que primero en la implementación en Jefe>>trabajarConFicha: unaFicha
-       su método va a ser delegado por self secretario, el cual su secretario sabrá responder el mensaje buscarFichero: unaFicha, para luego el método de dicho mensaje será              delegado a self fichero, y Fichero sabrá interpretar el mensaje buscar. No hay anidamiento de mensajes por lo que lo hace más entendible al código.
+      *Elijo la opción 2 porque no está rompiendo encapsulamiento entre los objetos que se envían mensajes, ya que primero en la implementación en Jefe>>trabajarConFicha: unaFicha su método va a ser delegado por self secretario, el cual su secretario sabrá responder el mensaje buscarFichero: unaFicha, para luego el método de dicho mensaje será delegado a self fichero, y Fichero sabrá interpretar el mensaje buscar. No hay anidamiento de mensajes por lo que lo hace más entendible al código.
        
 3) Polimorfismo
     Existen cuentas bancarias que pueden ser de tipo CajaDeAhorro y CuentaCorriente. Indique los defectos de cada una de las opciones.
