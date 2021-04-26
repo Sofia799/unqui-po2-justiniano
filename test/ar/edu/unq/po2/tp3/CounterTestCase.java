@@ -17,7 +17,7 @@ class CounterTestCase {
 
 		// Se agregan los numeros. Un solo par y nueve impares
 
-		counter.addNumber(1);
+		counter.addNumber(0);
 		counter.addNumber(3);
 		counter.addNumber(5);
 		counter.addNumber(7);
