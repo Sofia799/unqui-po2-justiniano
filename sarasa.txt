@@ -1,1 +1,38 @@
-jklflkfgkdfg
+Punto 2: Examinar las expresiones
+	
+	String a = "abc";
+	String s = a;
+	String t;
+	
+s.length(); 
+// retorna la longitud de la cadena a. Osea, retorna el valor 3.
+
+t.length();
+//da error porque la variable t no está inicializada
+
+1 + a;
+// retorna "1abc" porque le agrega 1 a la cadena.
+
+a.toUpperCase();
+// retorna el string a pero todos los caracteres en mayúsculas. Osea "ABC"
+
+"Libertad".indexOf("r");
+// retorna el índice del carácter "r" en "Libertad". Osea, retorna 4. El 0 también tiene una posición, que es 0.
+
+"Universidad".lastIndexOf('i');
+// retorna la última aparición del caracter "i" en "Universidad". Osea, en la posición 7. El 0 también tiene una posición, que es 0.
+
+"Quilmes".substring(2,4);
+// retorna el string resultante donde al string original se extrae desde el carácter de la posicion 2 a la
+	posicion 4. Osea, retorna "il"
+
+(a.length() + a).startsWith("a");
+// Retorna true si la cadena empieza con "a"
+
+s == a;
+// Retorna un booleano 
+
+a.substring(1,3).equals("bc")
+// retorna un booleano. Si el string resultante entre las posiciones 1 y 3 es igual a la cadena "bc".
+
+	
