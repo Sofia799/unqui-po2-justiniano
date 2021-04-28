@@ -35,4 +35,32 @@ s == a;
 a.substring(1,3).equals("bc")
 // retorna un booleano. Si el string resultante entre las posiciones 1 y 3 es igual a la cadena "bc".
 
+
+
+Punto 3: Tipos primitivos
+
+1) 	¿Qué son los tipos de datos primitivos?
+	Los tipos de datos en Java se deben indicar siempre su tipo para que puedan ser usados. Los tipos 
+	primitivos de Java son los que ya vienen con el lenguaje, que son: byte, short, int, long, float, doble,
+	booleano y char.
+	
+2) 	¿Cuál es la diferencia entre un int y un Integer?
+	int es el tipo de dato primitivo e Integer es la clase del tipo int.
+
+3) 	¿Si se define una variable de instancia de tipo int cual sería su valor predeterminado? ¿Y si se
+	define una de tipo Integer? Haga la prueba en Eclipse.
+	En int, su valor predeterminado sería 0. En Integer, su valor predeterminado sería null.
+	
+4) 	Responder la pregunta del punto anterior (3), pero ahora en lugar de definir una variable de
+	instancia se define una variable de método.
+
+
+
+
+
+
+
+
+
+
 	

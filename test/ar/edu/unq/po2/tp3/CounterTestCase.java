@@ -32,12 +32,23 @@ class CounterTestCase {
 
 	@Test
 	public void testEvenNumbers() {
-
-		// Getting the even occurrences
 		int amount = counter.getEvenOcurrences();
 
-		// I check the amount is the expected one
-		assertEquals(amount, 2);
+		assertEquals(amount, 3);
+	}
+	
+	@Test
+	public void testOddNumbers() {
+		int numerosImpares = counter.getOddNumbers();
+		
+		assertEquals(numerosImpares, 7);
+	}
+	
+	@Test
+	public void testMultiplosDeNumeros() {
+		int numerosMultiplos = counter.getNumerosMultiplosDe(2);
+		
+		assertEquals(numerosMultiplos, 3);
 	}
 
 }
