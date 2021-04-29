@@ -12,10 +12,8 @@ class CounterTestCase {
 	@BeforeEach
 	public void setUp() throws Exception {
 
-		// Se crea el contador
+		
 		counter = new Counter();
-
-		// Se agregan los numeros. Un solo par y nueve impares
 
 		counter.addNumber(0);
 		counter.addNumber(3);

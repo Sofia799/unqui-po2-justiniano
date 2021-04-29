@@ -54,6 +54,13 @@ Punto 3: Tipos primitivos
 4) 	Responder la pregunta del punto anterior (3), pero ahora en lugar de definir una variable de
 	instancia se define una variable de método.
 
+Punto 8: Encapsulamiento
+
+1)	Responder: Si un objeto cualquiera que le pide la edad a una Persona: ¿Conoce cómo ésta calcula u
+	obtiene tal valor? ¿Cómo se llama el mecanismo de abstracción que permite esto?
+	Lo sabe através de setters and getters
+	
+2) 
 
 
 
