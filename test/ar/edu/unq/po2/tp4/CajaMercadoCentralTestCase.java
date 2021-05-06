@@ -13,19 +13,19 @@ class CajaMercadoCentralTestCase {
 	public void setUp() throws Exception {
 
 		caja.cargarProductos();
-
+		//caja.cargarFacturas();
 	}
 
 	@Test
 	public void registarProductoEmpresaTradicional() {
-		Producto producto = caja.registrarProducto(new Producto(2));
+		Producto producto = caja.registrarProducto(new ProductoEmpresaTradicional(2));
 		assertEquals(producto.getPrecio(), 10.4);
 		assertEquals(producto.getStock(), 2);
 	}
 
 	@Test
 	public void registrarProductoCooperativa() {
-		Producto producto = caja.registrarProducto(new Producto(1));
+		Producto producto = caja.registrarProducto(new ProductoCooperativa(1));
 		assertEquals(Math.round(producto.getPrecio()), 100);
 		assertEquals(producto.getStock(), 1);
 	}

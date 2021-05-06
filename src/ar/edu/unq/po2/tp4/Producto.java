@@ -1,10 +1,10 @@
 package ar.edu.unq.po2.tp4;
 
-public class Producto {
+public abstract class Producto {
 	private Integer codigo;
 	private Double precio;
 	private Integer stock;
-	private TipoProductoEnum tipo;
+	//private TipoProductoEnum tipo;
 
 	public Producto() {
 		super();
@@ -13,13 +13,15 @@ public class Producto {
 	public Producto(Integer codigo) {
 		this.codigo = codigo;
 	}
+	
 
-	public Producto(Integer codigo, Double precio, Integer stock, TipoProductoEnum tipo) {
+
+	public Producto(Integer codigo, Double precio, Integer stock) {
 		this.codigo = codigo;
 		this.precio = precio;
 		this.stock = stock;
-		this.tipo = tipo;
 	}
+	
 
 	public Integer getCodigo() {
 		return codigo;
@@ -45,6 +47,7 @@ public class Producto {
 		this.stock = stock;
 	}
 
+	/*
 	public TipoProductoEnum getTipo() {
 		return tipo;
 	}
@@ -52,5 +55,6 @@ public class Producto {
 	public void setTipo(TipoProductoEnum tipo) {
 		this.tipo = tipo;
 	}
+	*/
 
 }

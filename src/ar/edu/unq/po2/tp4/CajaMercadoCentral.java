@@ -16,9 +16,9 @@ public class CajaMercadoCentral {
 	}
 
 	public void cargarProductos() {
-		Producto producto1 = new Producto(1, Double.valueOf("110.00"), 2, TipoProductoEnum.COOPERATIVA);
-		Producto producto2 = new Producto(2, Double.valueOf("10.40"), 3, TipoProductoEnum.EMPRESA_TRADICIONAL);
-		Producto producto3 = new Producto(3, Double.valueOf("140.5"), 1, TipoProductoEnum.COOPERATIVA);
+		Producto producto1 = new ProductoCooperativa(1, Double.valueOf("110.00"), 2);
+		Producto producto2 = new ProductoEmpresaTradicional(2, Double.valueOf("10.40"), 3);
+		Producto producto3 = new ProductoCooperativa(3, Double.valueOf("140.5"), 1);
 
 		añadirProducto(producto1);
 		añadirProducto(producto2);
@@ -27,40 +27,51 @@ public class CajaMercadoCentral {
 	}
 
 	public Producto registrarProducto(Producto producto) {
-		Producto p = obtenerProducto(producto);
-		
+		Producto p = obtenerProducto(producto.getCodigo());
 		actualizarStock(p);
-		obtenerPrecio(p);
-		
-		return p;
+		//obtenerPrecio(p);
 
+		return p;
 	}
-	
+
+	/*
 	private Producto obtenerPrecio(Producto producto) {
 		if (producto.getTipo().equals(TipoProductoEnum.COOPERATIVA)) {
-			producto.setPrecio(producto.getPrecio()/1.10);
+			producto.setPrecio(producto.getPrecio() / 1.10);
 		}
 		return producto;
 	}
+	*/
 
-	private Producto obtenerProducto(Producto producto) {
-		Iterator<Producto> it = getProductos().iterator();
-		while (it.hasNext()) {
-			Producto p = it.next();
-			if (p.getCodigo().equals(producto.getCodigo())) {
-				return p;
-			}
+	/*
+	 * private Producto obtenerProducto(Producto producto) { for (int i = 0; i <
+	 * getProductos().size(); i++) { Producto productoAObtener =
+	 * getProductos().get(i); if
+	 * (productoAObtener.getCodigo().equals(producto.getCodigo())) { return
+	 * productoAObtener; } } return null; }
+	 */
 
-		}
-		return null;
-	}
-	
+	/*
+	 * private Producto obtenerProducto(Producto producto) { Iterator<Producto> it =
+	 * getProductos().iterator(); while (it.hasNext()) { Producto p = it.next(); if
+	 * (p.getCodigo().equals(producto.getCodigo())) { return p; }
+	 * 
+	 * } return null; }
+	 */
+
+	private Producto obtenerProducto(Integer codigo) { 
+		Producto producto = productos.stream()
+				  .filter(p -> codigo.equals(p.getCodigo()))
+				  .findAny().orElse(null);
+		return producto;
+	 }
+
 	private void actualizarStock(Producto producto) {
 		Iterator<Producto> it = getProductos().iterator();
 		while (it.hasNext()) {
 			Producto p = it.next();
 			if (p.getCodigo().equals(producto.getCodigo())) {
-				p.setStock(p.getStock()-1);
+				p.setStock(p.getStock() - 1);
 			}
 
 		}
