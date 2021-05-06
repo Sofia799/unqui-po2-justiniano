@@ -18,9 +18,7 @@
 
 	
 6) Porqué, en lenguajes como Smalltalk, no es necesaria la implementacion de interfaces?
-	Porque en Smalltalk hay herencia múltiple entre las superclases y en java las superclases solo 
-	heredan de una superclase, por lo cual necesitan de interfaces que pueden tener heredear de varias
-	interfaces.
+	Porque Smalltalk es un lenguaje de tipado dinámico
 	
 	
 	
