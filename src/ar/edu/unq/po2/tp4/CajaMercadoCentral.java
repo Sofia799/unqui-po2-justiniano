@@ -44,11 +44,14 @@ public class CajaMercadoCentral {
 	*/
 
 	/*
-	 * private Producto obtenerProducto(Producto producto) { for (int i = 0; i <
-	 * getProductos().size(); i++) { Producto productoAObtener =
-	 * getProductos().get(i); if
-	 * (productoAObtener.getCodigo().equals(producto.getCodigo())) { return
-	 * productoAObtener; } } return null; }
+	 * private Producto obtenerProducto(Producto producto) { 
+	 * 	for (int i = 0; i < getProductos().size(); i++) { 
+	 * 		Producto productoAObtener = getProductos().get(i); 
+	 * 		if (productoAObtener.getCodigo().equals(producto.getCodigo())) { 
+	 * 		return productoAObtener; 
+	 * 		}
+	 *	} return null; 
+	 *}
 	 */
 
 	/*
@@ -65,7 +68,12 @@ public class CajaMercadoCentral {
 				  .findAny().orElse(null);
 		return producto;
 	 }
+	
+	private void actualizarStock(Producto producto) {
+		
+	}
 
+	/*
 	private void actualizarStock(Producto producto) {
 		Iterator<Producto> it = getProductos().iterator();
 		while (it.hasNext()) {
@@ -75,7 +83,9 @@ public class CajaMercadoCentral {
 			}
 
 		}
+		
 	}
+	*/
 
 	private void añadirProducto(Producto producto) {
 		getProductos().add(producto);

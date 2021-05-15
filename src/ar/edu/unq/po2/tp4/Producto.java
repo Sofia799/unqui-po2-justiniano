@@ -15,7 +15,6 @@ public abstract class Producto {
 	}
 	
 
-
 	public Producto(Integer codigo, Double precio, Integer stock) {
 		this.codigo = codigo;
 		this.precio = precio;
@@ -47,14 +46,5 @@ public abstract class Producto {
 		this.stock = stock;
 	}
 
-	/*
-	public TipoProductoEnum getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(TipoProductoEnum tipo) {
-		this.tipo = tipo;
-	}
-	*/
-
+	
 }
