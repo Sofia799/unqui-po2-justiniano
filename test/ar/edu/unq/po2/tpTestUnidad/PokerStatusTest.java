@@ -7,10 +7,11 @@ import org.junit.jupiter.api.Test;
 
 class PokerStatusTest {
 
+	/*
 	@BeforeEach
 	void setUp() throws Exception {
 	}
-
+	*/
 	@Test
 	void testDadas5Cartas_SeVerificaQueElJugadorObtuvoPoquer() {
 		PokerStatus pokerStatus = new PokerStatus();
