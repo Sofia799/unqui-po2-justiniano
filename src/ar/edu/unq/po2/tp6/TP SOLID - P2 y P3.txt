@@ -1,6 +1,7 @@
 2) Detecte violaciones de principios SOLID.
 * Violación del principio n°4, Interface segregation principle (principio de segregación de interfaces).
 * Violación del principio n°5, Dependency inversion principle (principio de inversion de dependencias).
+* Violación del principio n°2, Open Closed 
 
 
 3) Indique las soluciones que deben llevarse a cabo.
@@ -17,3 +18,6 @@ implemente de dicha interfaz.
 *Otra modificacion que haría es que en el método de enviarCorreo , le pasaría por parámetro directamente un 
 Correo, y en el test lo instanciaría ya como new Correo(String, String, String) con su asunto, destinatario y
 cuerpo.
+
+*Como viola el 2do principio de Open Closed al tener las variables no clasificadas como privadas, lo que
+hice fue prácticamente hacer eso, poner a sus variables como privadas que es lo que correspondería.

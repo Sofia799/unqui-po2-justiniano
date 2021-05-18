@@ -6,10 +6,11 @@
 	Porque se produce la herencia múltiple y por lo tanto tiene que recurrir a la interfaz
 	
 3) Que ventajas tienen las clases abstractas sobre las interfaces?
-	Las clases abstractas pueden tener métodos y las interfaces es sólo el nombre del mensaje.
+	Las clases abstractas pueden implementar métodos en los mensajes y las interfaces es sólo el
+	nombre del mensaje.
 	Las clases abstractas pueden instanciar clases y las interfaces no.
 	Las clases abstractas solo pueden tener metodos abstractos publicos o protected, mientras que en
-	una interface solo son metodos publicos
+	una interface solo son mensajes publicos.
 
 4) Se puede instanciar una interface?
 	No, las interfaces no se instancian. Las interfaces solo se implementan
@@ -18,10 +19,37 @@
 
 	
 6) Porqué, en lenguajes como Smalltalk, no es necesaria la implementacion de interfaces?
-	Porque Smalltalk es un lenguaje de tipado dinámico
+	Porque Smalltalk es un lenguaje de tipado dinámico, es decir, no se le indica el tipo de las
+	variables
 	
+	INTERFACES, COLECCIONES Y OTRAS YERBAS
+La interfaz Collection que al ser una superinterfaz no puede ser instanciada, por lo que siempre va
+a ser conveniente instanciar las interfaces o clases que implementen a la superInterfaz Collection,
+como ArrayList, List y LinkedList. Y no sólo eso, sino que si quiero indicar el tipo de coleccion
+en los parámetros en XXX o YYY o cualquiera de los que están en el ejercicio, no puedo pasar a dicha
+coleccion que sea de tipo Collection, porque por ejemplo:
+
+	public Collection<Object> getSubCollection(Collection<Object> collection , int x , int y) {
+			return collection.subList(x,y);
+	}
 	
+A collection que le indico que el tipo es de Collection<Object> no tiene implementado el mensaje subList()
+porque esta interfaz no tiene implementaciones directas. Solo las sub interfaces que implementan a la
+interfaz Collection las pueden conocer, asi que debo pasarle su tipo a un ArrayList por ejemplo.
 	
+	DE SMALLTALK A JAVA: PERSONAS Y MASCOTAS
+4) No hizo falta preguntarle si era una persona o mascota, con solo pedirle su nombre ya me lo devuelve.
+5) En smalltak si pueden responder el mensaje getNombre por herencia si los agrupo en una super clase
+SerVivo por ejemplo que donde tenga el mensaje getNombre y tanto Mascota como Persona van a saber responder
+a dicho mensaje.
+6) Iteré una lista de tipo SerVivo, que va a ser las super clase que Mascota y Persona van a extender y
+sabrán responder mediante herencia el mensaje getNombre, y así no será necesario que para pedirle el 
+nombre a cada objeto se le pregunte si es tipo Mascota o Persona.
+Si la clase Persona es subclass de otra superClase llamada SerVivo pero Mascota no lo es, entonces lo que
+hice fue que ambas clases implementen una interfaz llamada ISerVivo con el protocolo getNombre. Para
+probar si funciona el mismo código a como lo había hecho antes con un ArrayList tipo SerVivo, ahora lo
+implementé con otro ArrayList tipo ISerVivo, e iteré la lista pidiendole a cada clase su nombre sin
+tener que preguntarle por su tipo.
 	
 	
 	

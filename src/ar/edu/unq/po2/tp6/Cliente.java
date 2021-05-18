@@ -7,7 +7,7 @@ public class Cliente {
 	private Integer edad;
 	private float sueldoNetoMensual;
 	private float sueldoNetoAnual;
-	ISolicitud solicitud;
+	private ISolicitud solicitud;
 	
 
 	public Cliente(String nombre, String direccion, Integer edad, float sueldoMensual, float sueldoAnual, ISolicitud solicitud) {
@@ -66,14 +66,6 @@ public class Cliente {
 	public void setSueldoNetoAnual(float sueldoNetoAnual) {
 		this.sueldoNetoAnual = sueldoNetoAnual;
 	}
-
-	/*
-	public void solicitarCreditoDeEnCuotas(float montoSolicitado, Integer cuotasSolicitadas) {
-		this.setMontoSolicitud(montoSolicitado);
-		this.setCuotasSolicitud(cuotasSolicitadas);
-	}
-	*/
-
 
 	public ISolicitud getSolicitud() {
 		return solicitud;

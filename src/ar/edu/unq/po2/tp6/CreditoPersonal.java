@@ -4,10 +4,12 @@ public class CreditoPersonal implements ISolicitud {
 
 	private float monto;
 	private int cuotas;
+	private String nombreCliente;
 
-	public CreditoPersonal(float monto, int cuotas) {
+	public CreditoPersonal(String nombreCliente ,float monto, int cuotas) {
 		this.setMonto(monto);
 		this.setCuotas(cuotas);
+		this.setNombreCliente(nombreCliente);
 	}
 
 	public float getMonto() {
@@ -24,6 +26,14 @@ public class CreditoPersonal implements ISolicitud {
 
 	public void setCuotas(int cuotas) {
 		this.cuotas = cuotas;
+	}
+
+	public String getNombreCliente() {
+		return nombreCliente;
+	}
+
+	public void setNombreCliente(String nombreCliente) {
+		this.nombreCliente = nombreCliente;
 	}
 
 }

@@ -38,20 +38,36 @@ public class Banco {
 		ISolicitud solicitudCliente = cliente.getSolicitud();
 		solicitudes.add(solicitudCliente);
 	}
+	
 
-	public float calcularCreditoDeSolicitudDe(Cliente cliente) {
-		float montoCredito = cliente.getSueldoNetoMensual();
+	public ISolicitud procesarSolicitudDeCliente(Cliente cliente) {
+		ISolicitud solicitud = null;
 		for (int i = 0; i < solicitudes.size(); i++) {
-			if (solicitudes.get(i).equals(cliente.getSolicitud())) {
-				montoCredito = montoCredito / calcularCredito(solicitudes.get(i));
+			if (solicitudes.get(i).getNombreCliente().equals(cliente.getNombre())) {
+				solicitud = solicitudes.get(i);
 			}
 		}
-		return montoCredito;
+		return solicitud;
 	}
 
-	private float calcularCredito(ISolicitud solicitudCredito) {
-		float credito = solicitudCredito.getMonto() * solicitudCredito.getCuotas();
-		return credito;
+	public Boolean validarOtorgamientoDeCreditoPersonalACliente(Cliente cliente) {
+		float sueldoAnual = cliente.getSueldoNetoAnual();
+		float sueldoMensual = cliente.getSueldoNetoMensual();
+		float setentaPorcientoSueldoMensual = (sueldoMensual * 70) / 100;
+		float montoDeCuota = cliente.getSolicitud().getMonto() / cliente.getSolicitud().getCuotas();
+		
+		return (sueldoAnual > 15.000f) && (montoDeCuota < setentaPorcientoSueldoMensual);
 	}
+
+	public Boolean validarOtorgamientoDeCreditoHipotecarioACliente(Cliente cliente) {
+		float sueldoMensual = cliente.getSueldoNetoMensual();
+		float cincuentaPorcientoSueldoMensual = (sueldoMensual * 50) / 100;
+		float montoDeCuota = cliente.getSolicitud().getMonto() / cliente.getSolicitud().getCuotas();
+		//float setentaPorcientoValorFiscal = cliente.getSolicitud();
+		
+		return (montoDeCuota < cincuentaPorcientoSueldoMensual) && (cliente.getEdad() < 65);
+	}
+	
+	
 
 }

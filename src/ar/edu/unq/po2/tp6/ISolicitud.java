@@ -5,4 +5,6 @@ public interface ISolicitud {
 	public int getCuotas();
 	
 	public float getMonto();
+	
+	public String getNombreCliente();
 }
