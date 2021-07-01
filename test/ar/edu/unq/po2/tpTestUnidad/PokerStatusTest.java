@@ -1,23 +1,34 @@
 package ar.edu.unq.po2.tpTestUnidad;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class PokerStatusTest {
-
-	/*
+	
+	PokerStatus pokerStatus;
+	
 	@BeforeEach
 	void setUp() throws Exception {
+		pokerStatus = new PokerStatus();
+		
 	}
-	*/
+	
 	@Test
 	void testDadas5Cartas_SeVerificaQueElJugadorObtuvoPoquer() {
-		PokerStatus pokerStatus = new PokerStatus();
-		Boolean jugadorObtuvoPoquer = pokerStatus.verificar("2P","10P","10T","10C","10D");
+		Boolean jugadorObtuvoPoquer = pokerStatus.verificar("QP","KP","QT","QC","QD");
 		
 		assertTrue(jugadorObtuvoPoquer);
+		
+	}
+	
+	@Test
+	void testDadas5Cartas_SeVerificaQueElJugadorNoObtuvoPoquer() {
+		Boolean jugadorObtuvoPoker = pokerStatus.verificar("3P", "6T", "QT", "2P", "QD");
+		
+		assertFalse(jugadorObtuvoPoker);
 	}
 
 }

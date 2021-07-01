@@ -1,0 +1,83 @@
+Ejercicio 1)
+Punto 2) 
+
+	a)Dónde se define el esqueleto del algoritmo?
+	El esqueleto del algoritmo se define en el template method que define la clase abstracta
+	en la cuál sus subclases van a implementar ese método sin tener q cambiar algo en el 
+	código del esqueleto
+	
+	b) Se puede redefinir el esqueleto?
+	No se puede porque es un método tipo "final" donde sus subclases no van a poder
+	redefinirlo. Es un método que todas las subclases van a implementarlo pero no van a 
+	realizarles cambios al código.
+	
+	c) Que es lo que se puede redefinir?
+	
+	d) Que es un hook method?
+	Es un método que  define la clase abstracta que no hace nada. Es un método vacío que lo
+	que hace es dar lugar a que las subclases cuando lo implementen a ese método lo redefinan
+	cada una.
+	
+Ejercicio 5)
+Punto 2)
+	Elementos que aparecen en la solucion planteada:
+		Clase Abstracta: Cuenta Bancaria
+		Clase Concreta: Cuenta Corriente y Caja de ahorro
+		Templated Method: el método "extraer" 
+		Operaciones primitivas: el método "validar"
+		Operaciones concretas: el método "agregarMovimientos"
+		Hook methods: no tiene
+		
+
+Ejercicio 6)
+	Punto 1) Existe más de un tipo de adaptadores, mencione y explique cada uno de ellos.
+				
+			* adaptadores de clases: adapta  la clase o interfaz que necesita adaptarse a la 
+			interfaz Target que es la que el Client usa.
+			
+			* adaptadores de objetos: funciona con muchos objetos adaptables , osea con la clase
+			Adaptable y sus subclases si las tiene.
+			
+	Punto2) En qué se diferencian un tipo de adaptador del otro?
+	
+			Se diferencian en que el adaptador de clases solo se adapta a una clase concreta, y por
+			lo general es subclase del adaptable, lo cual permite redefinir parte del comportamiento
+			del mismo.
+			En cambio el adaptador de objetos es muy dificil que se pueda redefinir comportamiento,
+			ya que al adaptable se le debe crear subclases hijas y hacer que el adaptador se refiera
+			a la subclase en vez del adaptable como tal.
+			
+	Punto 3) Se pueden utilizar ambas alternativas de implementacion del patron en java?
+	
+			Se pueden implementar siempre y cuando teniendo algunas consideraciones para cada una:
+			
+			*Para el adaptador de clases, el adaptador debe heredar publicamente del Target y 
+			privadamente del Adaptable
+			
+			*Para el adaptador de objetos, que se los llama adaptadores conectables, cuenta con 3
+			enfoques de implementacion: 
+				1. usar operaciones abstractas
+				2. usar objetos delegados
+				3. usar adaptadores parametrizados
+	
+	Punto 4) Ver la interface Enumeration de java y la clase Vector, preste atencion a que dicha
+			clase contiene un método "elements()". Explique como funciona el patron adapter y cuales
+			son los roles de los participantes entre la interface y la clase mencionada. Mencione 
+			que tipo de implementacion del patron utiliza.
+			
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
