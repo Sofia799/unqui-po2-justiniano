@@ -30,5 +30,10 @@ class PokerStatusTest {
 		
 		assertFalse(jugadorObtuvoPoker);
 	}
+	
+	@Test
+	void testDadas5Cartas () {
+		
+	}
 
 }
