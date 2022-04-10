@@ -41,5 +41,19 @@ class CounterTestCase {
 		
 		assertEquals(multiplos, 6);
 	}
+	
+	@Test
+	void testObtenerElMayorMultiploEntre0Y1000Entre2Numeros() {
+		Integer mayorMultiplo = counter.obtenerMultiploMasAltoDel0Al1000Entre(2, 4);
+		
+		assertEquals(mayorMultiplo, 996);
+	}
+	
+	@Test
+	void testObtenerMenosUnoAlBuscarElMayorMultiploEntre0Y1000Entre2Numeros() {
+		Integer mayorMultiplo = counter.obtenerMultiploMasAltoDel0Al1000Entre(500, 287);
+		
+		assertEquals(mayorMultiplo, -1);
+	}
 
 }

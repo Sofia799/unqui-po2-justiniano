@@ -74,4 +74,39 @@ public class Counter {
 		}
 		return cantPares;
 	}
+	
+	public int obtenerMultiploMasAltoDel0Al1000Entre(int x, int y) {
+		Integer mayorMultiplo = -1;
+		for (int i = 0; i < 1000; i++) {
+			if (sonMultiplosDe(x, y, i)) {
+				mayorMultiplo = i;
+			}
+		}
+		return mayorMultiploSiExiste(mayorMultiplo);
+	}
+
+	private int mayorMultiploSiExiste(Integer mayorMultiplo) {
+		if (mayorMultiplo == 0) {
+			return -1;
+		} else {
+			return mayorMultiplo;
+		}
+	}
+
+	private boolean sonMultiplosDe(int x, int y, int i) {
+		return esMultiploDe(x,i) && esMultiploDe(y, i);
+	}
+
+	private boolean esMultiploDe(int x, int i) {
+		return i % x == 0;
+	}
 }
+
+
+
+
+
+
+
+
+
