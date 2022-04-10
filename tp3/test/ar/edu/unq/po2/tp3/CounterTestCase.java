@@ -44,9 +44,9 @@ class CounterTestCase {
 	
 	@Test
 	void testObtenerElMayorMultiploEntre0Y1000Entre2Numeros() {
-		Integer mayorMultiplo = counter.obtenerMultiploMasAltoDel0Al1000Entre(2, 4);
+		Integer mayorMultiplo = counter.obtenerMultiploMasAltoDel0Al1000Entre(3, 9);
 		
-		assertEquals(mayorMultiplo, 996);
+		assertEquals(mayorMultiplo, 999);
 	}
 	
 	@Test
