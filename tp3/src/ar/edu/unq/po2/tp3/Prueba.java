@@ -24,6 +24,17 @@ public class Prueba {
 		System.out.println(s == a); // retorna true. ya que las 2 variables son iguales.
 		System.out.println(a.substring(1, 3).equals("bc")); // retorna true. la subcadena que retorna a.substring(1,3)
 															// es "bc"
+		
+		Integer nro = null;
+		System.out.println(nro);
+		
+		
+	}
+	
+	public void metodoPrueba() {
+		Integer nro = null;
+		System.out.println("metodo prueba: " + nro);
+		
 	}
 
 }
