@@ -1,5 +1,7 @@
 package ar.edu.unq.po2.tp3;
 
+import java.time.LocalDate;
+
 public class Prueba {
 
 	public static void main(String[] args) {
@@ -28,7 +30,8 @@ public class Prueba {
 		Integer nro = null;
 		System.out.println(nro);
 		
-		
+		Integer hoy = LocalDate.now().compareTo(LocalDate.of(2001, 2, 22));
+		System.out.println(hoy);
 	}
 	
 	public void metodoPrueba() {
