@@ -33,10 +33,6 @@ public class Producto {
 		this.precio = precio;
 	}
 
-	public Boolean getEsDePreciosCuidados() {
-		return esDePreciosCuidados;
-	}
-
 	public void setEsDePreciosCuidados(Boolean esDePreciosCuidados) {
 		this.esDePreciosCuidados = esDePreciosCuidados;
 	}
