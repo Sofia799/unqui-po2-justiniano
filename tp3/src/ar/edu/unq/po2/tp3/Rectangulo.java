@@ -1,7 +1,5 @@
 package ar.edu.unq.po2.tp3;
 
-import java.util.function.BooleanSupplier;
-
 public class Rectangulo {
 	private Point point;
 	private Integer ancho;
@@ -38,25 +36,23 @@ public class Rectangulo {
 	}
 
 	public Integer calcularArea() {
-		
+
 		return getAncho() * getAlto();
 	}
 
 	public Integer calcularPerimetro() {
-		
+
 		return (getAlto() * 2) + (getAncho() * 2);
 	}
 
 	public Boolean esHorizontal() {
-		
+
 		return getAncho() > getAlto();
 	}
 
 	public Boolean esVertical() {
-		
+
 		return getAlto() > getAncho();
 	}
-
-	
 
 }
