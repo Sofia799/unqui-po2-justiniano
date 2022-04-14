@@ -17,10 +17,6 @@ class ProductoPrimeraNecesitadTest {
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testCalcularPrecio() {
-		/*
-		 * Double precioNuevo = leche.precioProductoPrimeraCalidad();
-		 * leche.setPrecio(precioNuevo);
-		 */
 
 		assertEquals(new Double(7.2), leche.getPrecio());
 	}

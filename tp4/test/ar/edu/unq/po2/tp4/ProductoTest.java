@@ -9,7 +9,7 @@ class ProductoTest {
 
 	private Producto arroz;
 	private Producto vino;
-
+ 
 	@BeforeEach
 	public void setUp() {
 		arroz = new Producto("Arroz", 18.9d, true);
