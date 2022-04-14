@@ -9,6 +9,11 @@ public class Point {
 		setCoordenadaY(0);
 	}
 
+	public Point(Integer x, Integer y) {
+		setCoordenadaX(x);
+		setCoordenadaY(y);
+	}
+
 	public Integer getCoordenadaX() {
 		return coordenadaX;
 	}
