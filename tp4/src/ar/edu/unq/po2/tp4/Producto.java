@@ -8,7 +8,7 @@ public class Producto {
 	public Producto(String nombre, Double precio) {
 		setNombre(nombre);
 		setPrecio(precio);
-		setEsDePreciosCuidados(false);
+		setEsDePreciosCuidados(false); 
 	}
 
 	public Producto(String nombre, Double precio, Boolean esDePreciosCuidados) {

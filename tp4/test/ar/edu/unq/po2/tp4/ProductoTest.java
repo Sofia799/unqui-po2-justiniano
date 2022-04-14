@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class ProductoTest {
 
 	private Producto arroz;
-	private Producto vino;
+	private Producto vino; 
  
 	@BeforeEach
 	public void setUp() {

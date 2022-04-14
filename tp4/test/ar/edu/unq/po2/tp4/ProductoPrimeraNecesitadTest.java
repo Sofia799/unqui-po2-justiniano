@@ -11,14 +11,14 @@ class ProductoPrimeraNecesitadTest {
 
 	@BeforeEach
 	public void setUp() {
-		leche = new ProductoPrimeraNecesidad("Leche", 8d, false);
+		leche = new ProductoPrimeraNecesidad("Leche", 8d, false, 0.8);
 	}
 
 	@SuppressWarnings("deprecation")
 	@Test
 	public void testCalcularPrecio() {
 
-		assertEquals(new Double(7.2), leche.getPrecio());
+		assertEquals(new Double(6.4), leche.getPrecio());
 	}
 
 }
