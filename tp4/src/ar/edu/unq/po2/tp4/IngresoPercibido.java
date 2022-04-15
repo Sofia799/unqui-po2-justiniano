@@ -7,7 +7,7 @@ public class IngresoPercibido {
 
 	public IngresoPercibido(String mesPercepcion, String concepto, Double monto) {
 		setMesPercepcion(mesPercepcion);
-		setConcepto(concepto);
+		setConcepto(concepto); 
 		setMontoPercibido(monto);
 	}
 

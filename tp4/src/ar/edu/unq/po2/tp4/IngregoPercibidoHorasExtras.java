@@ -12,7 +12,7 @@ public class IngregoPercibidoHorasExtras extends IngresoPercibido {
 	public void setCantHorasExtras(Integer cantHorasExtras) {
 		this.cantHorasExtras = cantHorasExtras;
 	}
-	
+
 	public Double montoImponible() {
 		return 0.0;
 	}
