@@ -33,9 +33,10 @@ public class PokerStatus {
 	}
 
 	private Boolean esColor(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
-		// el color se da cuando las cinco cartas son del mismo color y palo
-		return (carta1.tieneMismoPaloDe(carta2) && carta2.tieneMismoPaloDe(carta3) && carta3.tieneMismoPaloDe(carta4)
-				&& carta4.tieneMismoPaloDe(carta5));
+		return (carta1.tieneMismoPaloDe(carta2) && 
+				carta2.tieneMismoPaloDe(carta3) && 
+				carta3.tieneMismoPaloDe(carta4) && 
+				carta4.tieneMismoPaloDe(carta5));
 	}
 
 	private Boolean esPoquer(Carta carta1, Carta carta2, Carta carta3, Carta carta4, Carta carta5) {
@@ -43,8 +44,9 @@ public class PokerStatus {
 	}
 
 	public Boolean primerasCuatroDelMismoValor(Carta carta1, Carta carta2, Carta carta3, Carta carta4) {
-		return (carta1.tieneMismoValor(carta2) && carta2.tieneMismoValor(carta3) 
-				&& carta3.tieneMismoValor(carta4));
+		return (carta1.tieneMismoValor(carta2) && 
+				carta2.tieneMismoValor(carta3) && 
+				carta3.tieneMismoValor(carta4));
 	}
 
 	public Jugada verificadorDeJugadas(Jugada jugadaJugador1, Jugada jugadaJugador2) {

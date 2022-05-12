@@ -36,7 +36,7 @@ class PokerStatusTestCase {
 
 	@Test
 	void elMetodoVerificarIndicaNadaSiLasCartasNoFormanUnJuego() {
-		// Setup
+		
 		carta1 = new Carta("Picas", "J");
 		carta2 = new Carta("Corazones", "Q");
 		carta3 = new Carta("Diamantes", "4");
