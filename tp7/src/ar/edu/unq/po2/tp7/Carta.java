@@ -12,7 +12,7 @@ public class Carta {
 	}
 
 	public Integer establecerValorDeCarta(String valorCarta) {
-		int valorADefinir = 0;
+		Integer valorADefinir = 0;
 		if (esNumerico(valorCarta)) {
 			char charValorDeCarta = valorCarta.charAt(0);
 			valorADefinir = Character.getNumericValue(charValorDeCarta);
@@ -36,7 +36,7 @@ public class Carta {
 		return (valorADefinir);
 	}
 	
-	private boolean esNumerico(String valorCarta) {
+	private Boolean esNumerico(String valorCarta) {
 		
 		return (valorCarta.contains("2")||
 			    valorCarta.contains("3")||
@@ -52,19 +52,19 @@ public class Carta {
 		return (this.paloCarta);
 	}
 
-	public int getValor() {
+	public Integer getValor() {
 		return (this.valorCarta);
 	}
 
-	public boolean tieneValorSuperiorA(Carta carta2) {
+	public Boolean tieneValorSuperiorA(Carta carta2) {
 			return ( this.getValor() > carta2.getValor() );
 	}
 
-	public boolean tieneMismoPaloDe(Carta carta2) {
+	public Boolean tieneMismoPaloDe(Carta carta2) {
 		return ( this.getPalo() == carta2.getPalo() );
 	}
 
-	public boolean tieneMismoValor(Carta segundaCarta) {
+	public Boolean tieneMismoValor(Carta segundaCarta) {
 		return (getValor() == segundaCarta.getValor());
 	}
 
