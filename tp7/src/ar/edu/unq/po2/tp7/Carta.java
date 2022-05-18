@@ -1,7 +1,7 @@
 package ar.edu.unq.po2.tp7;
 
 public class Carta {
-
+	
 	private String paloCarta;
 	private Integer valorCarta;
 
@@ -67,6 +67,6 @@ public class Carta {
 	public Boolean tieneMismoValor(Carta segundaCarta) {
 		return (getValor() == segundaCarta.getValor());
 	}
-
+	
 
 }
