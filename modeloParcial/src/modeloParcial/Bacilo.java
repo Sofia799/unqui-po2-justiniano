@@ -2,16 +2,16 @@ package modeloParcial;
 
 public class Bacilo extends Bacteria {
 
-	private int longitud;
+	private double longitud;
 
-	public Bacilo(int longitud,int edad) {
+	public Bacilo(double longitud,int edad) {
 		super(edad);
 		this.longitud = longitud;
 	}
 
 	@Override
-	public Integer consumoO2() {
-		int resultado = 3 * this.longitud;
+	public double consumoO2() {
+		double resultado = 3 * this.longitud;
 		if (super.getEdad() > 2) {
 			return resultado / super.getEdad();
 		}

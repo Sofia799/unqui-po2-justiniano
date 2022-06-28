@@ -15,8 +15,8 @@ public class Barril {
 		this.consumidores = new ArrayList<Consumidor>();
 	}
 	
-	public Integer getConsumo() {
-		int consumo = 0;
+	public double getConsumo() {
+		double consumo = 0;
 		for (int i = 0; i < this.consumidores.size(); i++) {
 			Consumidor consumidor = this.consumidores.get(i);
 			consumo = consumo + consumidor.consumoO2();
