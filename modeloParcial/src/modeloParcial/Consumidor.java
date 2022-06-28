@@ -4,4 +4,7 @@ public interface Consumidor {
 	
 	public Integer consumoO2();
 
+	public boolean esInmediata();
+
+
 }
